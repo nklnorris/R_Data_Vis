@@ -72,7 +72,7 @@ mean(survey$Height, na.rm = TRUE)
 
 ## Describe Bivariate Relationships
 
-###Determine if men and women have different smoking habits by creating a table.
+### Determine if men and women have different smoking habits by creating a table.
 
 ```{r}
 Smoke <- factor(survey$Smoke, levels = c("Never","Occas","Regul", "Heavy"))
@@ -86,6 +86,17 @@ table(survey$Sex, Smoke)
 ggplot(data=survey,aes(Smoke))+geom_bar(na.rm = TRUE) + facet_grid(.~survey$Sex)
 
 ```
+
+## Scatterplot of height and writing hand measurement
+
+First any missing values for height or writing hand measurements need to be removed. 
+
+```{r}
+survey2<-survey[!(is.na(survey$Height)), ]
+survey3<-survey2[!(is.na(survey2$Wr.Hnd)), ]
+ggplot(survey3, aes(x=Wr.Hnd, y=Height)) + geom_point() + ggtitle("Height v Writing Hand Size") + xlab("Writing Hand Size (cm.)") + ylab("Height (cm.)") + theme(plot.title = element_text(hjust = 0.5))
+```
+
 ## Test the null hypothesis that pulse rate is similar across all exercise levels
 
 ### Create a box plot showing pulse rate grouped by exercise level 
