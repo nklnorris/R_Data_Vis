@@ -5,11 +5,10 @@ This is an example of a hypothesis test I conducted in R as part of coursework d
 ## Description
 
 The data visualization covers:
-* Scatterplots
-* Line Graphs
+* Box plot
 * Bar Graphs
-* Stacked graphs
-* Various Settings (titles, legends, colors, highlighting specific ranges, fitting lines, etc.)
+* Line Graphs
+* Scatterplots
 
 The program was created in R Studio using R Markdown and does knit into a HTML file. 
 
@@ -18,6 +17,7 @@ The program was created in R Studio using R Markdown and does knit into a HTML f
 * R
 * R Studio
 * R Markdown
+* ggplot
 
 ## Authors
 
